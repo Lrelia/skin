@@ -1,0 +1,103 @@
+/* = 导航条相关属性 */
+$navBgCol: #222;
+$navTxtCol: #9d9d9d;
+$navBtCol: #101010;
+
+/* = 左边栏相关属性 */
+$leftWid: 175px;
+$leftBgCol: #cbcbcb;
+$leftBrCol: #c2c0c0;
+$leftLiHei: 40px;
+$leftLiBbCol: #ababab;
+$leftLiTxtCol: #222;
+$subMHei: 30px;
+$subMBgCol: #ddd;
+
+/* = 底部相关属性 */
+$bomHei: 40px;
+$bomBgCol: #222;
+$bomTxtCol: #9d9d9d;
+$bomBtCol: #101010;
+
+
+/* = resetCSS 
+ -------------------------------------------------------------------------*/
+* {
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    position: relative;
+    height: 100%;
+}
+a {
+    text-decoration: none;
+}
+
+/* = replace 
+ -------------------------------------------------------------------------*/
+.navbar {
+    margin-bottom: 0;
+    min-width: 1300px;
+}
+/* = navigation
+ -------------------------------------------------------------------------*/
+.wrapper {
+    position: relative;
+    min-height: 100%;
+}
+
+/* = content
+ -------------------------------------------------------------------------*/
+.content {
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+    position: relative;
+    height: 100%;
+}
+.left-menu {
+    position: relative;
+    width: $leftWid;
+    background: $leftBgCol;
+    border-right: 1px solid $leftBrCol;
+    li {
+        width: 100%;
+        height: $leftLiHei;
+        text-indent: 3em;
+        border-bottom: 1px solid $leftLiBbCol;
+        cursor: pointer;
+        a {
+            line-height: $leftLiHei;
+            color: $leftLiTxtCol;
+        }
+    }
+    .cus-submenu {
+        li {
+            height: $subMHei;
+            background: $subMBgCol;
+            a {
+                line-height: $subMHei;
+            }
+        }
+    }
+}
+
+.breadcrumb {
+    height: 40px;
+}
+
+
+/* = footer
+ -------------------------------------------------------------------------*/
+.bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $bomHei;
+    background: $bomBgCol;
+    color: $bomTxtCol;
+    text-align: center;
+    line-height: $bomHei;
+    border-top: 1px solid $bomBtCol;
+}
