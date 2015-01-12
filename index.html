@@ -23,7 +23,7 @@
                 </div>
                 <div>
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">我是菜单项1</a></li>
+                        <li class=""><a href="#">我是菜单项1</a></li>
                         <li><a href="#">我是菜单项2</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -40,24 +40,33 @@
                             </ul>
                         </li>
                     </ul>
+                    <a class="exit pull-right">退出</a>
                 </div>
             </nav>
             <section class="content">
                 <div class="left-menu">
-                    <ul>
-                        <li>
+                    <ul class="main-menu">
+                        <li data-sub="#sub-1">
                             <a href="###">侧菜单1</a>
                         </li>
-                        <ul class="cus-submenu">
+                        <ul id="sub-1" class="cus-submenu">
                             <li><a href="###">子菜单1</a></li>
                             <li><a href="">子菜单2</a></li>
                             <li><a href="">子菜单3</a></li>
                         </ul>
-                        <li><a href="###">侧菜单2</a></li>
-                        <li><a href="###">侧菜单3</a></li>
-                        <li><a href="###">侧菜单4</a></li>
-                        <li><a href="###">侧菜单5</a></li>
-                        <li><a href="###">侧菜单6</a></li>
+                        <li data-sub="#sub-2">
+                            <a href="###">侧菜单2</a>
+                            <span class="tri-bom"></span>
+                        </li>
+                        <ul id="sub-2" class="cus-submenu">
+                            <li><a href="###">子菜单1</a></li>
+                            <li><a href="">子菜单2</a></li>
+                            <li><a href="">子菜单3</a></li>
+                        </ul>
+                        <li data-sub="#sub-3"><a href="###">侧菜单3</a></li>
+                        <li data-sub="#sub-4"><a href="###">侧菜单4</a></li>
+                        <li data-sub="#sub-5"><a href="###">侧菜单5</a></li>
+                        <li data-sub="#sub-6"><a href="###">侧菜单6</a></li>
                     </ul>
                 </div>
                 <ol class="breadcrumb">

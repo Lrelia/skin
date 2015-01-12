@@ -1,7 +1,9 @@
 /* = 导航条相关属性 */
+$navHei: 52px;
 $navBgCol: #222;
 $navTxtCol: #9d9d9d;
 $navBtCol: #101010;
+$navLiAct: #080808;
 
 /* = 左边栏相关属性 */
 $leftWid: 175px;
@@ -21,7 +23,7 @@ $bomBtCol: #101010;
 
 
 /* = resetCSS 
- -------------------------------------------------------------------------*/
+-------------------------------------------------------------------------*/
 * {
     padding: 0;
     margin: 0;
@@ -34,21 +36,49 @@ a {
     text-decoration: none;
 }
 
-/* = replace 
- -------------------------------------------------------------------------*/
+/* = replace
+-------------------------------------------------------------------------*/
 .navbar {
     margin-bottom: 0;
-    min-width: 1300px;
+    border-radius: 0;
+} 
+.exit {
+    margin-right: 20px;
+    line-height: $navHei;
+    cursor: pointer;
 }
+
+/* = component
+-------------------------------------------------------------------------*/
+/*.tri-bom {
+    position: absolute;
+    right: 18px;
+    top: $leftLiHei/2 - 5px;
+    border-width: 6px 5px;
+    border-style: solid;
+    border-color: $navBgCol transparent transparent transparent;
+}
+.tri-right {
+    position: absolute;
+    right: 14px;
+    top: $leftLiHei/2 - 6px;
+    border-width: 5px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent $navBgCol;
+}*/
+.nav li:active {
+    background: $navLiAct;
+}
+
 /* = navigation
- -------------------------------------------------------------------------*/
+-------------------------------------------------------------------------*/
 .wrapper {
     position: relative;
     min-height: 100%;
 }
 
 /* = content
- -------------------------------------------------------------------------*/
+-------------------------------------------------------------------------*/
 .content {
     display: -moz-box;
     display: -webkit-box;
@@ -70,17 +100,24 @@ a {
         a {
             line-height: $leftLiHei;
             color: $leftLiTxtCol;
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
     .cus-submenu {
+        display: none;
         li {
             height: $subMHei;
             background: $subMBgCol;
+            font-size: 13px;
+            text-indent: 4em;
             a {
                 line-height: $subMHei;
             }
         }
     }
+
 }
 
 .breadcrumb {
@@ -89,7 +126,7 @@ a {
 
 
 /* = footer
- -------------------------------------------------------------------------*/
+-------------------------------------------------------------------------*/
 .bottom {
     position: absolute;
     bottom: 0;
@@ -101,3 +138,5 @@ a {
     line-height: $bomHei;
     border-top: 1px solid $bomBtCol;
 }
+
+

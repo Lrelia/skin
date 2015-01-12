@@ -3,7 +3,7 @@
 /* = 左边栏相关属性 */
 /* = 底部相关属性 */
 /* = resetCSS 
- -------------------------------------------------------------------------*/
+-------------------------------------------------------------------------*/
 * {
   padding: 0;
   margin: 0; }
@@ -15,20 +15,46 @@ html, body {
 a {
   text-decoration: none; }
 
-/* = replace 
- -------------------------------------------------------------------------*/
+/* = replace
+-------------------------------------------------------------------------*/
 .navbar {
   margin-bottom: 0;
-  min-width: 1300px; }
+  border-radius: 0; }
+
+.exit {
+  margin-right: 20px;
+  line-height: 52px;
+  cursor: pointer; }
+
+/* = component
+-------------------------------------------------------------------------*/
+/*.tri-bom {
+    position: absolute;
+    right: 18px;
+    top: $leftLiHei/2 - 5px;
+    border-width: 6px 5px;
+    border-style: solid;
+    border-color: $navBgCol transparent transparent transparent;
+}
+.tri-right {
+    position: absolute;
+    right: 14px;
+    top: $leftLiHei/2 - 6px;
+    border-width: 5px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent $navBgCol;
+}*/
+.nav li:active {
+  background: #080808; }
 
 /* = navigation
- -------------------------------------------------------------------------*/
+-------------------------------------------------------------------------*/
 .wrapper {
   position: relative;
   min-height: 100%; }
 
 /* = content
- -------------------------------------------------------------------------*/
+-------------------------------------------------------------------------*/
 .content {
   display: -moz-box;
   display: -webkit-box;
@@ -50,17 +76,23 @@ a {
     .left-menu li a {
       line-height: 40px;
       color: #222; }
-  .left-menu .cus-submenu li {
-    height: 30px;
-    background: #ddd; }
-    .left-menu .cus-submenu li a {
-      line-height: 30px; }
+      .left-menu li a:hover {
+        text-decoration: none; }
+  .left-menu .cus-submenu {
+    display: none; }
+    .left-menu .cus-submenu li {
+      height: 30px;
+      background: #ddd;
+      font-size: 13px;
+      text-indent: 4em; }
+      .left-menu .cus-submenu li a {
+        line-height: 30px; }
 
 .breadcrumb {
   height: 40px; }
 
 /* = footer
- -------------------------------------------------------------------------*/
+-------------------------------------------------------------------------*/
 .bottom {
   position: absolute;
   bottom: 0;
