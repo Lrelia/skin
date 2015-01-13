@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta name="apple-mobile-web-app-status-bar-style" />
+        <meta content="telephone=no" name="format-detection"/>
         <title></title>
         <link rel="stylesheet" href="/dists/component/bootstrap.min.css"/>
         <link rel="stylesheet" href="/dists/global/global.min.css"/>
@@ -41,12 +45,25 @@
                         </li>
                     </ul>
                     <a class="exit pull-right">退出</a>
+                    <ul class="nav navbar-nav pull-right user-menu">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                用户<b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">用户注销</a></li>
+                                <li><a href="#">用户设置</a></li>
+                                <li><a href="#">用户信息</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </nav>
             <section class="content">
                 <div class="left-menu">
                     <ul class="main-menu">
                         <li data-sub="#sub-1">
+                            <span class="left-menu-icon glyphicon glyphicon-home"></span>
                             <a href="###">侧菜单1</a>
                         </li>
                         <ul id="sub-1" class="cus-submenu">
@@ -55,6 +72,7 @@
                             <li><a href="">子菜单3</a></li>
                         </ul>
                         <li data-sub="#sub-2">
+                            <span class="left-menu-icon glyphicon glyphicon-road"></span>
                             <a href="###">侧菜单2</a>
                             <span class="tri-bom"></span>
                         </li>
@@ -63,17 +81,179 @@
                             <li><a href="">子菜单2</a></li>
                             <li><a href="">子菜单3</a></li>
                         </ul>
-                        <li data-sub="#sub-3"><a href="###">侧菜单3</a></li>
-                        <li data-sub="#sub-4"><a href="###">侧菜单4</a></li>
-                        <li data-sub="#sub-5"><a href="###">侧菜单5</a></li>
-                        <li data-sub="#sub-6"><a href="###">侧菜单6</a></li>
+                        <li data-sub="#sub-3">
+                            <span class="left-menu-icon glyphicon glyphicon-eye-close"></span>
+                            <a href="###">侧菜单3</a>
+                        </li>
+                        <li data-sub="#sub-4">
+                            <span class="left-menu-icon glyphicon glyphicon-shopping-cart"></span>
+                            <a href="###">侧菜单4</a>
+                        </li>
+                        <li data-sub="#sub-5">
+                            <span class="left-menu-icon glyphicon glyphicon-floppy-open"></span>
+                            <a href="###">侧菜单5</a>
+                        </li>
+                        <li data-sub="#sub-6">
+                            <span class="left-menu-icon glyphicon glyphicon-transfer"></span>
+                            <a href="###">侧菜单6</a>
+                        </li>
                     </ul>
                 </div>
-                <ol class="breadcrumb">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">2013</a></li>
-                    <li class="active">十一月</li>
-                </ol>
+                <div class="main">
+
+                    <ol class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">2013</a></li>
+                        <li class="active">十一月</li>
+                    </ol>
+                    <div class="search">
+                        <form class="form-search">
+                            <div class="input-append">
+                                <input type="text" class="span2 search-query">
+                                <button type="submit" class="btn">Search</button>
+                            </div>
+                        </form>
+                    </div><!--/.search-->
+                    <table class="table table-bordered">
+                        <caption>边框表格布局</caption>
+                        <thead>
+                            <tr>
+                                <th>名称</th>
+                                <th>城市</th>
+                                <th>密码</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tanmay</td>
+                                <td>Bangalore</td>
+                                <td>560001</td>
+                            </tr>
+                            <tr>
+                                <td>Sachin</td>
+                                <td>Mumbai</td>
+                                <td>400003</td>
+                            </tr>
+                            <tr>
+                                <td>Uma</td>
+                                <td>Pune</td>
+                                <td>411027</td>
+                                </tr> <tr>
+                                <td>Tanmay</td>
+                                <td>Bangalore</td>
+                                <td>560001</td>
+                            </tr>
+                            <tr>
+                                <td>Sachin</td>
+                                <td>Mumbai</td>
+                                <td>400003</td>
+                            </tr>
+                            <tr>
+                                <td>Uma</td>
+                                <td>Pune</td>
+                                <td>411027</td>
+                                </tr> <tr>
+                                <td>Tanmay</td>
+                                <td>Bangalore</td>
+                                <td>560001</td>
+                            </tr>
+                            <tr>
+                                <td>Sachin</td>
+                                <td>Mumbai</td>
+                                <td>400003</td>
+                            </tr>
+                            <tr>
+                                <td>Uma</td>
+                                <td>Pune</td>
+                                <td>411027</td>
+                                </tr><tr>
+                                <td>Tanmay</td>
+                                <td>Bangalore</td>
+                                <td>560001</td>
+                            </tr>
+                            <tr>
+                                <td>Sachin</td>
+                                <td>Mumbai</td>
+                                <td>400003</td>
+                            </tr>
+                            <tr>
+                                <td>Uma</td>
+                                <td>Pune</td>
+                                <td>411027</td>
+                                </tr><tr>
+                                <td>Tanmay</td>
+                                <td>Bangalore</td>
+                                <td>560001</td>
+                            </tr>
+                            <tr>
+                                <td>Sachin</td>
+                                <td>Mumbai</td>
+                                <td>400003</td>
+                            </tr>
+                            <tr>
+                                <td>Uma</td>
+                                <td>Pune</td>
+                                <td>411027</td>
+                                </tr><tr>
+                                <td>Tanmay</td>
+                                <td>Bangalore</td>
+                                <td>560001</td>
+                            </tr>
+                            <tr>
+                                <td>Sachin</td>
+                                <td>Mumbai</td>
+                                <td>400003</td>
+                            </tr>
+                            <tr>
+                                <td>Uma</td>
+                                <td>Pune</td>
+                                <td>411027</td>
+                                </tr><tr>
+                                <td>Tanmay</td>
+                                <td>Bangalore</td>
+                                <td>560001</td>
+                            </tr>
+                            <tr>
+                                <td>Sachin</td>
+                                <td>Mumbai</td>
+                                <td>400003</td>
+                            </tr>
+                            <tr>
+                                <td>Uma</td>
+                                <td>Pune</td>
+                                <td>411027</td>
+                                </tr><tr>
+                                <td>Tanmay</td>
+                                <td>Bangalore</td>
+                                <td>560001</td>
+                            </tr>
+                            <tr>
+                                <td>Sachin</td>
+                                <td>Mumbai</td>
+                                <td>400003</td>
+                            </tr>
+                            <tr>
+                                <td>Uma</td>
+                                <td>Pune</td>
+                                <td>411027</td>
+                                </tr><tr>
+                                <td>Tanmay</td>
+                                <td>Bangalore</td>
+                                <td>560001</td>
+                            </tr>
+                            <tr>
+                                <td>Sachin</td>
+                                <td>Mumbai</td>
+                                <td>400003</td>
+                            </tr>
+                            <tr>
+                                <td>Uma</td>
+                                <td>Pune</td>
+                                <td>411027</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> <!--main-->
             </section>
             <footer class="bottom">
                 有米内部

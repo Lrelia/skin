@@ -1,25 +1,29 @@
 /* = 导航条相关属性 */
 $navHei: 52px;
-$navBgCol: #222;
-$navTxtCol: #9d9d9d;
-$navBtCol: #101010;
-$navLiAct: #080808;
+$navBgCol: #222;        // 导航条颜色
+$navTxtCol: #9d9d9d;    // 导航文字颜色
+$navBtCol: #101010;     // 导航底部线条颜色
+$navLiAct: #080808;     // 导航li条颜色
 
 /* = 左边栏相关属性 */
-$leftWid: 175px;
-$leftBgCol: #cbcbcb;
-$leftBrCol: #c2c0c0;
-$leftLiHei: 40px;
-$leftLiBbCol: #ababab;
-$leftLiTxtCol: #222;
+$leftWid: 175px;        // 侧边栏菜单的宽度
+$leftBgCol: #cbcbcb;    // 侧边栏的颜色
+$leftBrCol: #c2c0c0;    // 侧边栏边框颜色
+$leftLiHei: 40px;       // 侧边li条的高度
+$leftLiBbCol: #ababab;  // 侧边li条下边框颜色
+$leftLiTxtCol: #222;    // 侧边li条文字颜色
 $subMHei: 30px;
-$subMBgCol: #ddd;
+$subMBgCol: #ddd;       // 侧边 subli 条背景颜色
 
 /* = 底部相关属性 */
-$bomHei: 40px;
-$bomBgCol: #222;
-$bomTxtCol: #9d9d9d;
-$bomBtCol: #101010;
+$bomHei: 40px;          // 底部高度
+$bomBgCol: #222;        // 底部背景颜色
+$bomTxtCol: #9d9d9d;    // 底部文字颜色
+$bomBtCol: #101010;     // 底部边框颜色
+
+/* = active */
+$itemAcBg: #6c7dab;     // 侧边栏点击效果
+$itemSubAcBg: #8ca2df;  // 侧边栏子菜单点击效果
 
 
 /* = resetCSS 
@@ -42,30 +46,26 @@ a {
     margin-bottom: 0;
     border-radius: 0;
 } 
-.exit {
-    margin-right: 20px;
-    line-height: $navHei;
-    cursor: pointer;
+.search-query {
+    width: 50%;
 }
+.breadcrumb {
+    padding-left: 0;
+}
+
 
 /* = component
 -------------------------------------------------------------------------*/
-/*.tri-bom {
-    position: absolute;
-    right: 18px;
-    top: $leftLiHei/2 - 5px;
-    border-width: 6px 5px;
-    border-style: solid;
-    border-color: $navBgCol transparent transparent transparent;
+.exit {
+    margin-right: 20px;
+    line-height: 48px;
+    cursor: pointer;
 }
-.tri-right {
+.left-menu-icon {
     position: absolute;
-    right: 14px;
-    top: $leftLiHei/2 - 6px;
-    border-width: 5px 6px;
-    border-style: solid;
-    border-color: transparent transparent transparent $navBgCol;
-}*/
+    top: 12px;
+    left: -24px;
+}
 .nav li:active {
     background: $navLiAct;
 }
@@ -74,6 +74,7 @@ a {
 -------------------------------------------------------------------------*/
 .wrapper {
     position: relative;
+    padding-bottom: $bomHei;
     min-height: 100%;
 }
 
@@ -86,15 +87,28 @@ a {
     position: relative;
     height: 100%;
 }
+.main {
+    position: relative;
+    margin-left: 20px;
+    width: 70%;
+    overflow: hidden;
+}
+.itemAc {
+    background: $itemAcBg;
+}
+.itemSubAc {
+    background: $itemSubAcBg;
+}
 .left-menu {
     position: relative;
     width: $leftWid;
     background: $leftBgCol;
     border-right: 1px solid $leftBrCol;
     li {
+        position: relative;
         width: 100%;
         height: $leftLiHei;
-        text-indent: 3em;
+        text-indent: 4em;
         border-bottom: 1px solid $leftLiBbCol;
         cursor: pointer;
         a {
@@ -109,9 +123,8 @@ a {
         display: none;
         li {
             height: $subMHei;
-            background: $subMBgCol;
             font-size: 13px;
-            text-indent: 4em;
+            text-indent: 4.2em;
             a {
                 line-height: $subMHei;
             }
@@ -119,9 +132,19 @@ a {
     }
 
 }
+.cus-submenu {
+    background: $subMBgCol;
+}
+.user-menu {
+    margin-right: 10px;
+}
 
 .breadcrumb {
     height: 40px;
+    background: none;
+}
+.search {
+    margin: 30px auto;
 }
 
 

@@ -24,9 +24,15 @@
             submenu = $(submenu.sub);
             if(submenu.css('display') == 'none') rec = true;
             $('.cus-submenu').hide();
+            $('.itemAc').removeClass('itemAc');
             if(rec) { 
-                $(submenu).show(); 
+                $(this).addClass('itemAc');
+                $(submenu).show(300); 
             }
+        });
+        $('.cus-submenu').delegate("li", "click", function() {
+            $('.cus-submenu li').removeClass('itemSubAc');
+            $(this).addClass('itemSubAc');
         });
     })();
 })(window, document, location);
